@@ -1,0 +1,31 @@
+
+1.安装底层工具
+yum install -y yum-utils device-mapper-persistent-data lvm2
+2.添加安装源
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+3.查看最新稳定版
+yum list docker-ce --showduplicates | sort -r
+4.安装最新稳定版
+yum install docker-ce
+5.启动/重启/停止docker
+systemctl start docker
+systemctl daemon-reload
+systemctl stop docker
+6.加入系统启动项
+systemctl enable docker
+7.查看安装版本
+docker version
+
+------------------------------------------------------------------------------------------------------------------------------------------
+【启动时执行】
+1.CMD命令
+CMD命令：多个时只执行最后一个CMD命令，用于执行默认命令
+2.ENTRYPOINT命令
+和CMD命令，使用场景不一样，CMD命令用于灵活多变的参数，ENTRYPOINT命令用于固定的命令
+
+
+
+
+
+
+
